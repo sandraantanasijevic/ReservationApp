@@ -1,0 +1,643 @@
+{
+  "info": {
+    "_postman_id": "7a43a2ee-5735-4dea-8825-2e0f7e4c2401",
+    "name": "ReservationApp",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49301201",
+    "_collection_link": "https://go.postman.co/collection/49301201-7a43a2ee-5735-4dea-8825-2e0f7e4c2401?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"marija\",\r\n  \"password\": \"password\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/ReservationApp/api/korisnik",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "ReservationApp",
+            "api",
+            "korisnik"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"username\": \"marija\",\r\n  \"password\": \"password\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/ReservationApp/api/korisnik",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "ReservationApp",
+                "api",
+                "korisnik"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "GlassFish Server Open Source Edition  4.1"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1  Java/Oracle Corporation/1.8)"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 29 Jan 2026 09:46:20 GMT"
+            },
+            {
+              "key": "Content-Length",
+              "value": "0"
+            }
+          ],
+          "cookie": [],
+          "body": null
+        }
+      ]
+    },
+    {
+      "name": "Get Resurs",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/ReservationApp/api/resurs",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "ReservationApp",
+            "api",
+            "resurs"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/ReservationApp/api/resurs",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "ReservationApp",
+                "api",
+                "resurs"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "GlassFish Server Open Source Edition  4.1"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1  Java/Oracle Corporation/1.8)"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 29 Jan 2026 09:46:54 GMT"
+            },
+            {
+              "key": "Content-Length",
+              "value": "373"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 2,\n        \"naziv\": \"Sala 1\",\n        \"radnoDo\": \"17:00:00+01:00\",\n        \"radnoOd\": \"09:00:00+01:00\",\n        \"tip\": \"SALA\"\n    },\n    {\n        \"id\": 3,\n        \"naziv\": \"Sala 2\",\n        \"radnoDo\": \"16:00:00+01:00\",\n        \"radnoOd\": \"08:00:00+01:00\",\n        \"tip\": \"SALA\"\n    },\n    {\n        \"id\": 5,\n        \"naziv\": \"sala 3\",\n        \"radnoDo\": \"19:00:00+01:00\",\n        \"radnoOd\": \"12:00:00+01:00\",\n        \"tip\": \"SALA\"\n    },\n    {\n        \"id\": 7,\n        \"naziv\": \"Sala 4\",\n        \"radnoDo\": \"20:00:00+01:00\",\n        \"radnoOd\": \"08:00:00+01:00\",\n        \"tip\": \"SALA\"\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get slobodni termini",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/ReservationApp/api/termin/slobodni?datum=2026-01-20&resursId=6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "ReservationApp",
+            "api",
+            "termin",
+            "slobodni"
+          ],
+          "query": [
+            {
+              "key": "datum",
+              "value": "2026-01-20"
+            },
+            {
+              "key": "resursId",
+              "value": "6"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get slobodni termini",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/ReservationApp/api/termin/slobodni?datum=2026-01-20&resursId=6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "ReservationApp",
+                "api",
+                "termin",
+                "slobodni"
+              ],
+              "query": [
+                {
+                  "key": "datum",
+                  "value": "2026-01-20"
+                },
+                {
+                  "key": "resursId",
+                  "value": "6"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "GlassFish Server Open Source Edition  4.1"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1  Java/Oracle Corporation/1.8)"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 29 Jan 2026 09:50:34 GMT"
+            },
+            {
+              "key": "Content-Length",
+              "value": "195"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"datum\": \"2026-01-20\",\n        \"id\": 7,\n        \"resursId\": 6,\n        \"vremeDo\": \"11:00:00+01:00\",\n        \"vremeOd\": \"10:00:00+01:00\"\n    },\n    {\n        \"datum\": \"2026-01-20\",\n        \"id\": 9,\n        \"resursId\": 6,\n        \"vremeDo\": \"18:00:00+01:00\",\n        \"vremeOd\": \"17:00:00+01:00\"\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Create Rezervacija",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"korisnikId\": 1,\r\n  \"terminId\": 8,\r\n  \"status\": \"AKTIVNA\",\r\n  \"serijaId\": 0\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/ReservationApp/api/rezervacija",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "ReservationApp",
+            "api",
+            "rezervacija"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create Rezervacija",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"korisnikId\": 1,\r\n  \"terminId\": 8,\r\n  \"status\": \"AKTIVNA\",\r\n  \"serijaId\": 0\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/ReservationApp/api/rezervacija",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "ReservationApp",
+                "api",
+                "rezervacija"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "GlassFish Server Open Source Edition  4.1"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1  Java/Oracle Corporation/1.8)"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 29 Jan 2026 09:52:24 GMT"
+            },
+            {
+              "key": "Content-Length",
+              "value": "0"
+            }
+          ],
+          "cookie": [],
+          "body": null
+        }
+      ]
+    },
+    {
+      "name": "Update rezervacija",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 6,\r\n  \"korisnikId\": 1,\r\n  \"terminId\": 5,\r\n  \"status\": \"OTKAZANA\",\r\n  \"serijaId\": 3\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/ReservationApp/api/rezervacija",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "ReservationApp",
+            "api",
+            "rezervacija"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update rezervacija",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 6,\r\n  \"korisnikId\": 1,\r\n  \"terminId\": 5,\r\n  \"status\": \"OTKAZANA\",\r\n  \"serijaId\": 3\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/ReservationApp/api/rezervacija",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "ReservationApp",
+                "api",
+                "rezervacija"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "GlassFish Server Open Source Edition  4.1"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1  Java/Oracle Corporation/1.8)"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 29 Jan 2026 09:56:13 GMT"
+            },
+            {
+              "key": "Content-Length",
+              "value": "0"
+            }
+          ],
+          "cookie": [],
+          "body": null
+        }
+      ]
+    },
+    {
+      "name": "Delete rezervacija",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/ReservationApp/api/rezervacija/10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "ReservationApp",
+            "api",
+            "rezervacija",
+            "10"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete rezervacija",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/ReservationApp/api/rezervacija/10",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "ReservationApp",
+                "api",
+                "rezervacija",
+                "10"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "GlassFish Server Open Source Edition  4.1"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1  Java/Oracle Corporation/1.8)"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 29 Jan 2026 09:57:37 GMT"
+            },
+            {
+              "key": "Content-Length",
+              "value": "0"
+            }
+          ],
+          "cookie": [],
+          "body": null
+        }
+      ]
+    },
+    {
+      "name": "Create serija",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"tip\": \"GODISNJA\",\r\n    \"doDatum\": \"2035-12-31\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/ReservationApp/api/serija",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "ReservationApp",
+            "api",
+            "serija"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create serija",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tip\": \"GODISNJA\",\r\n    \"doDatum\": \"2035-12-31\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/ReservationApp/api/serija",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "ReservationApp",
+                "api",
+                "serija"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "GlassFish Server Open Source Edition  4.1"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1  Java/Oracle Corporation/1.8)"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 29 Jan 2026 09:58:52 GMT"
+            },
+            {
+              "key": "Content-Length",
+              "value": "0"
+            }
+          ],
+          "cookie": [],
+          "body": null
+        }
+      ]
+    },
+    {
+      "name": "Get moje rezervacije",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/ReservationApp/api/rezervacija/my/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "ReservationApp",
+            "api",
+            "rezervacija",
+            "my",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get moje rezervacije",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/ReservationApp/api/rezervacija/my/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "ReservationApp",
+                "api",
+                "rezervacija",
+                "my",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "GlassFish Server Open Source Edition  4.1"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1  Java/Oracle Corporation/1.8)"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 29 Jan 2026 10:15:28 GMT"
+            },
+            {
+              "key": "Content-Length",
+              "value": "585"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"datumRezervacije\": \"2026-01-29T10:34:01+01:00\",\n        \"id\": 11,\n        \"korisnikId\": 1,\n        \"serijaId\": 6,\n        \"status\": \"AKTIVNA\",\n        \"terminId\": 0\n    },\n    {\n        \"datumRezervacije\": \"2026-01-17T16:23:19+01:00\",\n        \"id\": 7,\n        \"korisnikId\": 1,\n        \"serijaId\": 3,\n        \"status\": \"OTKAZANA\",\n        \"terminId\": 6\n    },\n    {\n        \"datumRezervacije\": \"2026-01-17T16:23:19+01:00\",\n        \"id\": 6,\n        \"korisnikId\": 1,\n        \"serijaId\": 3,\n        \"status\": \"OTKAZANA\",\n        \"terminId\": 5\n    },\n    {\n        \"datumRezervacije\": \"2026-01-17T16:27:23+01:00\",\n        \"id\": 9,\n        \"korisnikId\": 1,\n        \"serijaId\": 4,\n        \"status\": \"AKTIVNA\",\n        \"terminId\": 8\n    },\n    {\n        \"datumRezervacije\": \"2026-01-29T10:52:24+01:00\",\n        \"id\": 12,\n        \"korisnikId\": 1,\n        \"serijaId\": 0,\n        \"status\": \"AKTIVNA\",\n        \"terminId\": 8\n    }\n]"
+        }
+      ]
+    }
+  ]
+}
