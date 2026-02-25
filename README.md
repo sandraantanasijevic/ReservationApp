@@ -3,7 +3,7 @@
 1. Opis projekta
 Aplikacija ReservationApp je serverska aplikacija koja omogućava upravljanje rezervacijama termina i resursa u poslovnom centru.
 Implementirana je u Java SE koristeći NetBeans, a testirana kroz Postman i phpMyAdmin.
-```
+
 Glavne funkcionalnosti:
 Logovanje korisnika
 Pregled resursa i slobodnih termina
@@ -13,7 +13,7 @@ Pregled sopstvenih rezervacija
 
 2. Struktura projekta
 Projektna struktura je organizovana u pakete:
-
+```
 ReservationApp/
 ├── dao/      
 ├── data/    
@@ -21,7 +21,7 @@ ReservationApp/
 ├── service/     
 ├── exception/
 └── ReservationDemo.java  
-
+```
 2.1 Reservation.dao
 Klase koje komuniciraju sa bazom:
 KorisnikDao, ResursDao, TerminDao, RezervacijaDao, RezervacionaSerijaDao
@@ -74,7 +74,7 @@ GET	http://localhost:8080/ReservationApp/api/termin/slobodni?datum=2026-01-20&re
 POST	http://localhost:8080/ReservationApp/api/rezervacija	Kreiranje rezervacije
 
 Putanje API-ja su prilagođene:
-
+```
 /api/korisnik umesto /api/auth
 /api/resurs umesto /api/resources
 /api/termin/slobodni umesto /api/resources/{id}/slots
@@ -82,10 +82,10 @@ Putanje API-ja su prilagođene:
 /api/rezervacija/id umesto /api/reservation
 /api/serija umesto /api/reservations/series
 /api/rezervacija/my/{korisnikId} umesto /api/myReservations
-
+```
 Polja JSON objekata su prevedena i prilagođena radi preglednosti (naziv, radnoOd, radnoDo, tip, datum, vremeOd, vremeDo).
 Slobodni termini se filtriraju po datumu i resursu koristeći query parametre (datum, resursId).
 Ponavljajuće rezervacije imaju polja tip i doDatum koja definišu učestalost i kraj serije (NEDELJNA, SVAKODNEVNA, GODISNJA).
 
 Sve izmene su napravljene radi bolje preglednosti i testiranja, a API sada omogućava sve funkcionalnosti zadatka: logovanje korisnika, pregled resursa, pregled slobodnih termina, kreiranje i izmenu rezervacija, otkazivanje, pregled sopstvenih rezervacija i kreiranje ponavljajućih rezervacija.
-```
+
