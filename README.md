@@ -1,3 +1,4 @@
+```
 # ReservationApp
 
 1. Opis projekta
@@ -10,7 +11,7 @@ Pregled resursa i slobodnih termina
 Kreiranje, izmena i otkazivanje rezervacija
 Kreiranje ponavljajućih rezervacija (serija)
 Pregled sopstvenih rezervacija
-
+```
 2. Struktura projekta
 Projektna struktura je organizovana u pakete:
 
@@ -88,3 +89,4 @@ Slobodni termini se filtriraju po datumu i resursu koristeći query parametre (d
 Ponavljajuće rezervacije imaju polja tip i doDatum koja definišu učestalost i kraj serije (NEDELJNA, SVAKODNEVNA, GODISNJA).
 
 Sve izmene su napravljene radi bolje preglednosti i testiranja, a API sada omogućava sve funkcionalnosti zadatka: logovanje korisnika, pregled resursa, pregled slobodnih termina, kreiranje i izmenu rezervacija, otkazivanje, pregled sopstvenih rezervacija i kreiranje ponavljajućih rezervacija.
+```
