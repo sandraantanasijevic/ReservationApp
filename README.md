@@ -22,51 +22,63 @@ ReservationApp/
 ├── exception/
 └── ReservationDemo.java  
 ```
-2.1 Reservation.dao
-Klase koje komuniciraju sa bazom:
+# 2.1 Reservation.dao
+
+**Klase koje komuniciraju sa bazom:**  
 KorisnikDao, ResursDao, TerminDao, RezervacijaDao, RezervacionaSerijaDao
 
-2.2 Reservation.data
-Model klase entiteta:
-Korisnik, Resurs, Termin, Rezervacija, RezervacionaSerija
-RezervacionaSerija ima tip i doDatum; serijaId povezuje rezervacije sa serijom.
+# 2.2 Reservation.data
 
-2.3 Reservation.service
-Servisi sa biznis logikom:
-KorisnikService, ResursService, TerminService, RezervacijaService, RezervacionaSerijaService
-Singleton pattern (getInstance()), koristi Dao sloj.
+**Model klase entiteta:**  
+Korisnik, Resurs, Termin, Rezervacija, RezervacionaSerija  
 
-2.4 Reservation.rest
-REST kontroleri:
-KorisnikRest, ResursRest, TerminRest, RezervacijaRest, RezervacionaSerijaRest
-Putanje: /api/korisnik, /api/resurs, /api/termin, /api/rezervacija, /api/serija
+RezervacionaSerija ima `tip` i `doDatum`; `serijaId` povezuje rezervacije sa serijom.
 
-2.5 Reservation.exception
-ReservationException – za greške pri radu sa bazom i servisima.
+# 2.3 Reservation.service
 
-2.6 ReservationDemo.java
-Demo klasa za testiranje:
-Dodaje korisnike, resurse, termine
-Kreira rezervacije i ponavljajuće serije (NEDELJNA, SVAKODNEVNA, GODISNJA)
-Prikazuje rezervacije u konzoli
+**Servisi sa biznis logikom:**  
+KorisnikService, ResursService, TerminService, RezervacijaService, RezervacionaSerijaService  
 
-3. Tehnologije i alati
+- Singleton pattern (`getInstance()`)  
+- Koristi Dao sloj
 
-Java SE 8 
-NetBeans IDE – razvojno okruženje za pisanje i pokretanje Java projekta.
-GlassFish 4.1 – server
-MySQL / phpMyAdmin – baza podataka 
-Postman – alat za testiranje REST API poziva
+# 2.4 Reservation.rest
 
-3.1 Rad sa bazom
+**REST kontroleri:**  
+KorisnikRest, ResursRest, TerminRest, RezervacijaRest, RezervacionaSerijaRest  
 
-Kreirane su tabele: korisnik, resurs, termin, rezervacija, rezervaciona_serija.
-Testiranje upisa i čitanja podataka je izvršeno kroz Postman i phpMyAdmin.
+**Putanje:**  
+`/api/korisnik`, `/api/resurs`, `/api/termin`, `/api/rezervacija`, `/api/serija`
 
-3.2 Testiranje API-ja
+# 2.5 Reservation.exception
 
-Postman je korišćen za testiranje svih endpointova (korisnik, resurs, termin, rezervacija, serija).
-Primeri test poziva:
+**ReservationException** – za greške pri radu sa bazom i servisima.
+
+# 2.6 ReservationDemo.java
+
+**Demo klasa za testiranje:**  
+- Dodaje korisnike, resurse, termine  
+- Kreira rezervacije i ponavljajuće serije (NEDELJNA, SVAKODNEVNA, GODIŠNJA)  
+- Prikazuje rezervacije u konzoli
+
+# 3. Tehnologije i alati
+
+- Java SE 8  
+- NetBeans IDE – razvojno okruženje za pisanje i pokretanje Java projekta  
+- GlassFish 4.1 – server  
+- MySQL / phpMyAdmin – baza podataka  
+- Postman – alat za testiranje REST API poziva
+
+## 3.1 Rad sa bazom
+
+- Kreirane su tabele: `korisnik`, `resurs`, `termin`, `rezervacija`, `rezervaciona_serija`  
+- Testiranje upisa i čitanja podataka je izvršeno kroz Postman i phpMyAdmin
+
+## 3.2 Testiranje API-ja
+
+- Postman je korišćen za testiranje svih endpointova (korisnik, resurs, termin, rezervacija, serija)  
+
+**Primeri test poziva:** 
 
 POST	http://localhost:8080/ReservationApp/api/korisnik	Dodavanje novog korisnika
 GET	http://localhost:8080/ReservationApp/api/resurs	Prikaz svih resursa
