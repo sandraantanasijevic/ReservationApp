@@ -3,7 +3,7 @@
 1. Opis projekta
 Aplikacija ReservationApp je serverska aplikacija koja omogućava upravljanje rezervacijama termina i resursa u poslovnom centru.
 Implementirana je u Java SE koristeći NetBeans, a testirana kroz Postman i phpMyAdmin.
-
+```
 Glavne funkcionalnosti:
 Logovanje korisnika
 Pregled resursa i slobodnih termina
@@ -82,7 +82,7 @@ Putanje API-ja su prilagođene:
 /api/rezervacija/id umesto /api/reservation
 /api/serija umesto /api/reservations/series
 /api/rezervacija/my/{korisnikId} umesto /api/myReservations
-
+```
 Polja JSON objekata su prevedena i prilagođena radi preglednosti (naziv, radnoOd, radnoDo, tip, datum, vremeOd, vremeDo).
 Slobodni termini se filtriraju po datumu i resursu koristeći query parametre (datum, resursId).
 Ponavljajuće rezervacije imaju polja tip i doDatum koja definišu učestalost i kraj serije (NEDELJNA, SVAKODNEVNA, GODISNJA).
